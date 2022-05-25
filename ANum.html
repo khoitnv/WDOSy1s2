@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Think of a number</title>
+    <style>
+        *    {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }   
+        body {
+            background-color: rgb(240, 209, 171);
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            border: 5px black double;
+            width: 70px;
+            height: 35px;
+        }
+        input{
+            width: 50%;
+        }
+        .row {
+            width: 100%;
+            position: relative;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+            clear: both;
+        }
+
+        .box {
+            background-color: rgb(240, 209, 171);
+            padding: 1%;
+            position: relative;
+            float: left;
+            text-align: center;
+            height: 65px;
+        }
+        .border{
+            border: 3px black solid;
+        }
+        #message{
+            position: absolute;
+            background-color: rgb(240, 209, 171);
+            top: -16px;
+            left: 45px;
+            z-index: 1;
+            width: 400px;
+
+        }
+        /* Responsive styles */
+        /* Destop: screen width >= 992px */
+        @media (min-width: 992px ) {
+            .col-lg-4 {
+                width: 33.33%;
+                
+            }
+        }
+        /* Tablet: screen width betweem 991px and 768px */
+        @media (max-width: 991px) and (min-width: 768px) {
+            .col-md-6 {width: 50%;}
+            .col-md-12 {width: 100%;}
+        }
+        /* Mobile: screen width <= 767 px */
+        @media (max-width: 767px) {
+            .col-s-12 {width: 100%;}
+        } 
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Guess a number</h1>
+    <div class="row border">
+        <span id="message">Please enter a number between 1 and 100</span>
+        <div class="row">   
+            <div class="box col-lg-4">  
+                <label for="fname">Guess a number:</label>
+                <input type="text" id="num" name="num"><br><br>
+            </div>
+            <div class="box col-lg-4"></div>
+            <div class="box col-lg-4"></div>
+        <div class="row"> 
+            <div class="box col-lg-4">
+                <button type="button" onclick="alert('Hello world!')">Guess</button>
+            </div>
+            <div class="box col-lg-4"></div>
+            <div class="box col-lg-4">
+                <button type="button" onclick="alert('Hello world!')">Restart</button>
+            </div>
+        <div class="row border">Message</div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
