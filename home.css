@@ -113,12 +113,14 @@ a.logo {
   background-color: rgba(255, 255, 255, 0.7);
   transition: 0.5s;
 }
-.footer-content {
-  height: 250px;
+footer {
   background-color: #646464;
 }
 .footer-content {
-  text-align: center;
+  height: 250px;
+  text-align: left;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 .footer-logo, .footer-products, .footer-address, .footer-contact {
   margin-top: 30px;
@@ -137,6 +139,23 @@ a.logowhite {
   margin-top: 25px;
   margin-left: 100px;
   color: #c2c2c2;
+}
+footer h2 {
+  color: white;
+  margin: 0 0 3px 70px;
+}
+footer hr {
+  width: 200px;
+  height: 3px;
+  background-color: white;
+  margin: 0 0 0 70px;
+}
+.footer-products ul, .footer-address ul, .footer-contact ul {
+  margin: 15px 0 0 70px;
+  padding-left: 15px;
+  color: #9b9b9b;
+  line-height: 1.5;
+  width: 80%;
 }
 /* Mobile and tablet */
 @media screen and (max-width: 768px) {
@@ -188,15 +207,34 @@ a.logowhite {
 
 }
 
-/* Laptop and desktop */
+/* Laptop */
 @media screen and (min-width: 769px) {
 .md6 {
   float: left;
   width: 50%;
 }
+.md4 {
+  float: left;
+  width: 33.33%;
+}
 .md3 {
   float: left;
   width: 25%;
-  
 }
+.footer-products {
+  display: none;
+}
+}
+
+/* Desktop */
+@media screen and (min-width: 1100px) {
+  .lg6 {
+    float: left;
+    width: 50%;
+  }
+  .lg3 {
+    float: left;
+    width: 25%;
+    
+  }
 }
