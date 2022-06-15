@@ -3,18 +3,18 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-nav {
   position: relative;
+  margin: 0;
 }
 .topnav ul {
   overflow: hidden;
-  background-image: linear-gradient(to right, #f7bbbb, #94e9fa);
   list-style-type: none;
   margin: 0;
   padding: 0;
+  height: 47.8px;
+}
+.topnav {
+  background-image: linear-gradient(to right, #f7bbbb, #83d7e7);
 }
 
 .topnav a {
@@ -24,12 +24,13 @@ nav {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .topnav a:hover {
   background-color: rgba(255, 255, 255, 0.3);
-  transition: 0.8s;
+  transition: 0.5s;
 }
 .topnav .icon {
   display: none;
@@ -49,13 +50,16 @@ a.logo {
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
-  background-image: url(logo.png);
+  background-image: url(logowhite.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 50px;
 }
 .main-content {
-  background-color: rgba(0, 0, 0, 0.690);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0, 0.7)),  url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
   padding-right: 20px;
   padding-left: 20px;
   margin-right: auto;
@@ -72,34 +76,67 @@ a.logo {
   margin-right: -20px;
   margin-left: -20px;
 }
-.one-grid {
+.md12 {
   float: left;
   width: 100%;
-  text-align: center;
 }
 .greet {
-  margin-top: 100px;
+  margin-top: 130px;
   font-size: 62.6pt;
   font-weight: bold;
   color: white;
+  text-align: center;
 }
 .intro {
   margin-top: 30px;
   font-size: 32pt;
+  color: white;
+  text-align: center;
 }
 .qualifications, .skills {
-  margin-top: 30px;
+  margin-top: 60px;
+  text-align: center;
+  
 }
 .qualifications a, .skills a {
-  border: 1px solid black;
   width: 300px;
   height: 69px;
   font-size: 19.7pt;
   display: inline-block;
-  padding-top: 19px;
+  padding-top: 20px;
   background-color: white;
   color: black;
   text-decoration: none;
+  font-weight: 500;
+}
+.qualifications a:hover, .skills a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.5s;
+}
+.footer-content {
+  height: 250px;
+  background-color: #646464;
+}
+.footer-content {
+  text-align: center;
+}
+.footer-logo, .footer-products, .footer-address, .footer-contact {
+  margin-top: 30px;
+}
+a.logowhite {
+  margin:auto 40px auto 100px;
+  display: flex;
+  background-image: url(logowhite.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 69px;
+}
+.footer-logo p {
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 100px;
+  color: #c2c2c2;
 }
 /* Mobile and tablet */
 @media screen and (max-width: 768px) {
@@ -119,10 +156,9 @@ a.logo {
   }
 }
 @media screen and (max-width: 768px) {
-.one-small-grid {
+.sm12 {
   float: left;
   width: 100%;
-  text-align: center;
 }  
 }
 
@@ -132,7 +168,6 @@ a.logo {
     clear: both;
     text-align: center;
   }
-  .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -141,15 +176,27 @@ a.logo {
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
   }
+  .topnav.responsive ul {
+    transition: height 0.3s;
+    height: 188px;
+  }
+  .topnav ul {
+    transition: height 0.3s;
+    height: 47.8px;
+  }
+
 }
 
 /* Laptop and desktop */
 @media screen and (min-width: 769px) {
-.two-big-grid {
+.md6 {
   float: left;
   width: 50%;
-  text-align: center;
+}
+.md3 {
+  float: left;
+  width: 25%;
+  
 }
 }
