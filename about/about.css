@@ -74,17 +74,15 @@ a.logo {
   width: 50px;
 }
 /* Add background */
+/* Making container for content */
 .main-content {
-  background-size: cover;
-  background-position: center;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-top: 50px;
+  padding-right: 180px;
+  padding-left: 180px;
   margin-right: auto;
   margin-left: auto;
   height: 1500px;
-  overflow: hidden;
 }
-/* Making container for content */
 .box {
   padding-right: 20px;
   padding-left: 20px;
@@ -95,20 +93,6 @@ a.logo {
   margin-right: -20px;
   margin-left: -20px;
 }
-/* Styling the text of "Hello World!"*/
-.greet {
-  font-size: 62.6pt;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
-.intro {
-  margin-top: 30px;
-  font-size: 32pt;
-  color: white;
-  text-align: center;
-}
-/* Aligning footer content and logo */
 footer {
   background-color: #646464;
 }
@@ -155,6 +139,11 @@ footer hr {
   line-height: 1.5;
   width: 80%;
 }
+.aboutme img {
+  height: 100%;
+  width: 230px;
+  float: left;
+}
 /* Responsive design for mobile, tablet, labtop and desktop */
 /* Mobile*/
 @media screen and (max-width: 768px) {
@@ -176,9 +165,6 @@ footer hr {
     float: left;
     width: 100%;
   }  
-  .greet {
-    margin-top: 90px;
-  }
   .footer-products {
     display: none;
   }
@@ -232,7 +218,7 @@ footer hr {
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
-    background-image: url(../logowhite.png));
+    background-image: url(../logowhite.png);
     background-repeat: no-repeat;
     background-size: contain;
     width: 200px;
@@ -297,12 +283,11 @@ footer hr {
   float: left;
   width: 25%;
 }
+/* Hide footer content of products when user uses laptop */
 .footer-products {
   display: none;
 }
-.greet {
-  margin-top: 140px;
-}
+/* Hide footer navbar when user uses laptop */
 nav.bottomnav {display: none;}
 }
 
@@ -316,8 +301,6 @@ nav.bottomnav {display: none;}
     float: left;
     width: 25%;
   }
-  .greet {
-    margin-top: 200px;
-  }
+  /* Hide footer navbar when user uses desktop */
   nav.bottomnav {display: none;}
 }
