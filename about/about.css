@@ -1,0 +1,348 @@
+/* This style is applied to all elements */
+* {
+  font-family: 'Courier New', Courier, monospace;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  margin: 0;
+}
+/* Top navbar */
+.topnav ul {
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.topnav {
+  background-image: linear-gradient(to right, #f7bbbb, #83d7e7);
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* This hover animation lets user knows the buttons on navbar are clickable */
+.topnav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.5s;
+}
+.topnav .icon {
+  display: none;
+}
+div.iconbar {
+  width: 20px;
+  height: 2.6px;
+  background-color: rgb(255, 255, 255);
+  margin: 3px 0;
+  border-radius: 10px;
+}
+/* Design of navbar bottom */
+.bottomnav ul {
+  overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.bottomnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* Aligning the logo in center of the navbar */
+a.logo {
+  position: absolute;
+  float: left;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  background-image: url(../logowhite.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+}
+/* Add background */
+.main-content {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgb(0, 0, 0, 0.7)),  url(../background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 1000px;
+  overflow: hidden;
+}
+/* Making container for content */
+.box {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+/* Styling the text of "Hello World!"*/
+.greet {
+  font-size: 62.6pt;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.intro {
+  margin-top: 30px;
+  font-size: 32pt;
+  color: white;
+  text-align: center;
+}
+/* Styling two big main buttons in the home page */
+.qualifications, .skills {
+  margin-top: 80px;
+  text-align: center;
+
+}
+.qualifications a, .skills a {
+  width: 300px;
+  height: 69px;
+  font-size: 19.7pt;
+  display: inline-block;
+  padding-top: 20px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+.qualifications a:hover, .skills a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.1s;
+}
+/* Aligning footer content and logo */
+footer {
+  background-color: #646464;
+}
+.footer-content {
+  height: 320px;
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 50px;
+}
+
+.footer-logo, .footer-products, .footer-address, .footer-contact {
+  padding-top: 30px;
+}
+a.logowhite {
+  margin:auto 40px auto 100px;
+  display: flex;
+  background-image: url(../logowhite.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 69px;
+}
+.footer-logo p {
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 100px;
+  color: #c2c2c2;
+}
+footer h2 {
+  color: white;
+  margin: 0 0 3px 70px;
+}
+footer hr {
+  width: 200px;
+  height: 5px;
+  background-color: white;
+  margin: 0 0 0 70px;
+}
+.footer-products ul, .footer-address ul, .footer-contact ul {
+  margin: 15px 0 0 70px;
+  padding-left: 15px;
+  color: #9b9b9b;
+  line-height: 1.5;
+  width: 80%;
+}
+/* Responsive design for mobile, tablet, labtop and desktop */
+/* Mobile*/
+@media screen and (max-width: 768px) {
+  .topnav li:first-child {
+    display: block;
+    float: left;
+  }
+  .topnav li:nth-child(2) {display: none;}
+  .topnav li:nth-child(3) {display: none;}
+  .topnav li:nth-child(4) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .skills {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sm12 {
+    float: left;
+    width: 100%;
+  }  
+  .greet {
+    margin-top: 90px;
+  }
+  .footer-products {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive li:not(:first-child) {
+    display: block;
+    clear: both;
+    text-align: center;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
+  .topnav.responsive ul {
+    transition: height 0.3s;
+    height: 188px;
+  }
+  .topnav ul {
+    transition: height 0.3s;
+    height: 47.8px;
+  }
+  .bottomnav a {
+    font-size: 0.85em;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 991px) {
+  .md12 {
+    float: left;
+    width: 100%;
+  }
+  .footer-products, .footer-address, .footer-contact {
+    display: none;
+  }
+  .greet {
+    margin-top: 120px;
+  }
+  a.logowhite {
+    position: absolute;
+    float: left;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    background-image: url(../logowhite.png));
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 69px;
+  }
+  .footer-logo p {
+    text-align: center;
+    margin-top: 110px;
+    margin-left: 0px;
+    color: #c2c2c2;
+    border-top: white 3px solid;
+    padding-top: 20px;
+  }
+  .topnav li:first-child {
+    display: block;
+    float: left;
+  }
+  .topnav li:nth-child(2) {display: none;}
+  .topnav li:nth-child(3) {display: none;}
+  .topnav li:nth-child(4) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav.responsive li:not(:first-child) {
+    display: block;
+    clear: both;
+    text-align: center;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
+  .topnav.responsive ul {
+    transition: height 0.3s;
+    height: 188px;
+  }
+  .topnav ul {
+    transition: height 0.3s;
+    height: 47.8px;
+  }
+  
+}
+
+/* Laptop */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+.lg6 {
+  float: left;
+  width: 50%;
+}
+.lg4 {
+  float: left;
+  width: 33.33%;
+}
+.lg3 {
+  float: left;
+  width: 25%;
+}
+.footer-products {
+  display: none;
+}
+.greet {
+  margin-top: 140px;
+}
+nav.bottomnav {display: none;}
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+  .xl6 {
+    float: left;
+    width: 50%;
+  }
+  .xl3 {
+    float: left;
+    width: 25%;
+  }
+  .greet {
+    margin-top: 200px;
+  }
+  nav.bottomnav {display: none;}
+}
